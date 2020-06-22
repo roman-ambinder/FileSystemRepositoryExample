@@ -4,7 +4,6 @@ using System.IO;
 
 namespace FileSystemRepositoryExample.Impl
 {
-
     public class FileSystemStreamStorage<Tkey> :
         IStreamStorageBy<Tkey>
     {

@@ -2,7 +2,7 @@
 
 namespace FileSystemRepositoryExample.Common.Interfaces
 {
-    public interface IKeyValueValidatorOf<TKey,TValue>
+    public interface IKeyValueValidatorOf<TKey, TValue>
     {
         OperationResult Validate(TKey key);
 

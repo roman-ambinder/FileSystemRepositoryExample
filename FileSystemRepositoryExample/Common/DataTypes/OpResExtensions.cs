@@ -22,7 +22,6 @@ namespace Roman.Ambinder.Infra.Common.DataTypes
         public static OperationResultOf<T> AsFailedOpRes<T>(this Exception target)
            => new OperationResultOf<T>(target);
 
-
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static OperationResultOf<T> AsFailedOpResOf<T>(this OperationResult opRes)
          => new OperationResultOf<T>(false, default, opRes.ErrorMessage);
@@ -30,6 +29,5 @@ namespace Roman.Ambinder.Infra.Common.DataTypes
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static OperationResultOf<T> AsFailedOpResOf<T>(this string errorMessage)
           => new OperationResultOf<T>(success: false, value: default, errorMessage: errorMessage);
-
     }
 }

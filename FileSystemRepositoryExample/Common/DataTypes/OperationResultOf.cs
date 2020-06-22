@@ -8,7 +8,7 @@ namespace Roman.Ambinder.Infra.Common.DataTypes
     public readonly struct OperationResultOf<TValue>
     {
         public OperationResultOf(Exception ex)
-        : this(success: false, value: default,errorMessage: ex?.Message)
+        : this(success: false, value: default, errorMessage: ex?.Message)
         { }
 
         public OperationResultOf(TValue value)

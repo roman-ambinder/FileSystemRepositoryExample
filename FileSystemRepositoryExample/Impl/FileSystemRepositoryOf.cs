@@ -6,7 +6,6 @@ using System.Runtime.CompilerServices;
 
 namespace FileSystemRepositoryExample.Impl
 {
-
     public class FileSystemRepositoryOf<TValue, TKey> :
         IRepositoyOf<TValue, TKey>
         where TValue : new()
@@ -16,7 +15,7 @@ namespace FileSystemRepositoryExample.Impl
         private readonly IKeyValueValidatorOf<TKey, TValue> _keyValueValidator;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="streamStore"></param>
         /// <param name="serializer"></param>
@@ -24,7 +23,7 @@ namespace FileSystemRepositoryExample.Impl
         public FileSystemRepositoryOf(
             IStreamStorageBy<TKey> streamStore,
             ISerializerOf<TValue> serializer,
-            IKeyValueValidatorOf<TKey, TValue> keyValueValidator = null)
+            IKeyValueValidatorOf<TKey, TValue> keyValueValidator)
         {
             _streamStore = streamStore;
             _serializer = serializer;

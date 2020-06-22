@@ -15,6 +15,15 @@ namespace FileSystemRepositoryExample.Impl
         private readonly ISerializerOf<TValue> _serializer;
         private readonly IKeyValueValidatorOf<TKey, TValue> _keyValueValidator;
 
+        public AsyncFileSystemRepositoryOf(IStreamStorageBy<TKey> streamStore,
+            ISerializerOf<TValue> serializer,
+            IKeyValueValidatorOf<TKey, TValue> keyValueValidator)
+        {
+            _streamStore = streamStore;
+            _serializer = serializer;
+            _keyValueValidator = keyValueValidator;
+        }
+
         public Task<OperationResultOf<TValue>> TryCreateAsync(TKey key,
             Action<TValue> init = null)
         {
